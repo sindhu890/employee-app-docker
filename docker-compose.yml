@@ -11,6 +11,8 @@ services:
  
   mysqldb:
     image: mysql:8
+    volumes:
+       - db-data:/var/lib/mysql/data
     networks:
       - employee-mysql
     environment:
