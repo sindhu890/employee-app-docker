@@ -2,6 +2,6 @@ com\javainuse\service\EmployeeService.class
 com\javainuse\SpringBootHelloWorldApplication.class
 com\javainuse\dao\EmployeeDaoImpl.class
 com\javainuse\service\EmployeeServiceImpl.class
-com\javainuse\controller\EmployeeController.class
+com\javainuse\EmployeeController.class
 com\javainuse\dao\EmployeeDao.class
 com\javainuse\model\Employee.class
