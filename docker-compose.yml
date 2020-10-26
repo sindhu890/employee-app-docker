@@ -3,26 +3,44 @@ version: "3"
 #services that needs to be up and running
 services:
   employee-jdbc:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: employee-jdbc
+    #image: sindhu890/springboot #to download from dockerhub
+    
     ports:
       - "8080:8080"
     networks:
       - employee-mysql
     depends_on:
       - mysqldb
+  
+  #  deploy:
+  #   replicas: 4
+  #   restart_policy:
+  #     max_attempts: 3
+  #     condition: on-failure       
+  
  
   mysqldb:
     image: mysql:8
-    volumes:
-       - db-data:/var/lib/mysqldatabase/data
+   # volumes:
+   #    - db-data:/var/lib/mysqldatabase/data
     networks:
       - employee-mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=bootdb  
+      
+    #  deploy:
+  #   replicas: 4
+  #   restart_policy:
+  #     max_attempts: 3
+  #     condition: on-failure   
 
-volumes:
-  db-data:
+#volumes:
+#  db-data:
   
 networks:
   employee-mysql:
