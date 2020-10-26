@@ -1,4 +1,6 @@
 version: "3"
+
+#services that needs to be up and running
 services:
   employee-jdbc:
     image: employee-jdbc
@@ -12,12 +14,15 @@ services:
   mysqldb:
     image: mysql:8
     volumes:
-       - db-data:/var/lib/mysql/data
+       - db-data:/var/lib/mysqldatabase/data
     networks:
       - employee-mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=bootdb  
 
+volumes:
+  db-data:
+  
 networks:
   employee-mysql:
