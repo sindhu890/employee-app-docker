@@ -2,7 +2,7 @@
 From openjdk:7
 
 #copies the bundle from target folder to current directory
-#copy ./target/employee-jdbc-0.0.1-SNAPSHOT.jar employee-jdbc-0.0.1-SNAPSHOT.jar
+copy ./target/employee-jdbc-0.0.1-SNAPSHOT.jar employee-jdbc-0.0.1-SNAPSHOT.jar
 
 #command entry point, runs the application using java -jar 
 CMD ["java","-jar","employee-jdbc-0.0.1-SNAPSHOT.jar"]
