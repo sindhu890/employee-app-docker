@@ -30,7 +30,7 @@ services:
     networks:
       - employee-mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_ROOT_PASSWORD=Admin123
       - MYSQL_DATABASE=bootdb  
       
     #  deploy:
