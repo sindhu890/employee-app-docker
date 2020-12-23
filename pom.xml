@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>employee-jdbc</name>
-	<description>Demo project for Spring Boot - test</description>
+	<description>Demo project for Spring Boot - final-demo</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
