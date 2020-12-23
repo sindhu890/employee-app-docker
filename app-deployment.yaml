@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: employee-jdbc
+spec:
+  selector:
+    matchLabels:
+      app: employee-jdbc
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: employee-jdbc
+    spec:
+      containers:
+      - image: sindhu890/employee-jdbc:latest
+        name: employee-jdbc-container
+        imagePullPolicy: Always
+        env:
+          # Use secret in real usage
+        ports:
+                - containerPort: 8080

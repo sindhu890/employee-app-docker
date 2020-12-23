@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: SIKR0000
+Build-Jdk: 15
+Implementation-Title: employee-jdbc
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.javainuse
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/employee-jdbc
+Created-By: Maven Integration for Eclipse
+
